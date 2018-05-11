@@ -1,0 +1,17 @@
+server:
+  port: 9004
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: rabbit-server
+  profiles:
+    active: dev
+  cloud:
+    config:
+      discovery:
+        serviceId: config-server
+        enabled: true
+      label: master
+      profile: dev
